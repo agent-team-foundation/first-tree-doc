@@ -1,85 +1,102 @@
 ---
-title: "Open Questions"
+title: "Open Questions — Resolved"
 owners: [liuchao001]
-status: draft
+status: approved
 ---
 
-# Open Questions
+# Open Questions — Resolved
 
-Questions raised during doc planning that need team discussion and decisions.
+Questions raised during doc planning. All resolved by team discussion on 2026-03-19.
 
 ---
 
 ## Q1: Multiple owner conflict
 
-If a node has multiple owners and they disagree (one approves, one rejects), what happens?
+**Question:** If a node has multiple owners and they disagree (one approves, one rejects), what happens?
 
-**Proposed answer:** Any owner can approve (OR logic). Rejection blocks with a required explanation. NODE.md owner is the final tiebreaker since Rule 1 says NODE.md is the folder-level authority. If two NODE.md co-owners keep disagreeing, split the domain into two subtrees with clear single owners.
-
-**Status:** needs team decision
+**Decision:** All owners must approve (AND logic). Every owner must approve to move to the next step. If any owner rejects, the change is blocked.
 
 ---
 
 ## Q2: Tree maintenance process
 
-When code changes and the doc is now out of sync (e.g. product spec says features A, B, C but engineers dropped C during implementation), how does the tree stay current?
+**Question:** When code and tree are out of sync, how does it stay current?
 
-Three models:
+**Decision:** The Context Tree is the _decision layer_. The codebase is the _execution layer_. These two layers are separated and independent.
 
-- **Human updates:** Engineer opens a PR on the tree after changing code. Relies on humans remembering.
-- **Agent detects drift:** An autonomous agent periodically compares code to tree nodes and opens PRs when they diverge. Node owner reviews.
-- **CI/CD triggers:** On every merge to main, a workflow checks if the change relates to any tree node and notifies the owner or triggers an agent to draft an update.
+- The decision layer does not have execution layer context. The tree does not look at code.
+- The execution layer does not change the decision layer. Code does not modify the tree.
+- Agents must follow NODE.md when implementing. The tree is the source of truth.
+- **Reviewer agent:** checks that PRs in the codebase have no conflict with NODE.md.
+- **Maintainer agent:** periodically checks code/doc alignment (cron job). If execution diverges from the decision, the maintainer flags it, but the tree is not auto-updated from code.
 
-**Proposed answer:** All three are valid. Agent drift detection is the native model. The agent is the Librarian. It maintains what humans forget. But humans still approve.
+```
+Decision Layer (Tree)          Execution Layer (Code)
 
-**Status:** needs team decision
+  decisions ──────────▶ guide ──────────▶ implementation
+  designs                                  code
+  ownership                                configs
 
----
-
-## Q3: Can agents approve or reject PRs?
-
-Can approval/rejection only be done by humans manually, or can agents do it too?
-
-**Proposed answer:** Yes, agents can approve and reject. If an agent is listed as an owner of a node, it has the same authority as a human owner. That is the whole point of "agents as peers." An owner is an owner regardless of whether they are human or agent.
-
-A human owner's personal agent (their clone/assistant) could also act on their behalf if the human has delegated that permission. This ties into the Identity pillar: permission delegation is explicit and revocable.
-
-**Status:** needs team decision
-
----
-
-## Q4: What if someone (human or agent) approves or rejects by mistake?
-
-Fallback mechanisms for incorrect actions.
-
-**Proposed answer:** Git is the fallback. Every action is a commit.
-
-- **Mistaken approval (merged something wrong):** Revert the commit. Git revert creates a new commit that undoes the change. The history shows what happened and why it was reverted. The tree is never truly broken because you can always roll back.
-- **Mistaken rejection:** Reopen the PR. The rejection reason is in the PR history. The author or another owner can override.
-- **Agent acting incorrectly:** The agent's owner (the human who delegated permissions) can revoke the delegation. The Identity pillar specifies that permissions are "explicit and revocable."
-
-Three layers of safety:
-
-1. **Git history.** Every action is recorded. Nothing is permanently lost. Revert any commit.
-2. **NODE.md hierarchy.** A parent NODE.md owner can always override a child. The root owner is the final backstop.
-3. **Permission revocation.** If an agent is making bad decisions, its permissions can be revoked by the human who granted them.
-
-**Status:** needs team decision
+  Tree tells code WHAT to do.
+  Code does NOT tell tree what it decided.
+  They live in separate repos.
+  They are independent.
+```
 
 ---
 
-## Q5: Is there a dedicated agent for code/doc alignment?
+## Q3: Librarian agent pattern
 
-Should there be a specific agent role that watches code changes and keeps tree nodes in sync, running periodically?
+**Question:** Should there be a dedicated agent for code/doc alignment?
 
-**Proposed answer:** Yes. This is the "Librarian agent" pattern. An agent that:
+**Decision:** Covered by Q2. Two agent roles replace the single Librarian concept:
 
-- Runs continuously or on a schedule
-- Owns or watches the documentation subtrees
-- Monitors code changes (via git hooks, CI triggers, or periodic scans)
-- Opens PRs on tree nodes when it detects drift
-- Node owners (human or agent) review and approve
+1. **Reviewer agent** — checks PRs against NODE.md for conflicts
+2. **Maintainer agent** — cron job that periodically checks alignment
 
-This is not defined in the current standard as a requirement, but it is a recommended pattern. The standard defines the tree format and ownership rules. How teams maintain the tree (manually, with agents, or with CI) is up to them. But the Librarian agent is the intended model.
+---
 
-**Status:** needs team decision
+## Q4: Fallback for mistakes
+
+**Question:** What if someone approves or rejects by mistake?
+
+**Decision:** Create a new PR. Fallback is always through a new PR, maintaining clean git history. No out-of-band reverts.
+
+---
+
+## Q5: Stale/deprecated nodes
+
+**Question:** How do agents identify stale or deprecated nodes?
+
+**Decision:** Node owner must maintain and state in a new NODE.md that the previous one is deprecated. Deprecation is owner-driven. Agents do not auto-deprecate.
+
+---
+
+## Q6: Default tree templates
+
+**Question:** Should there be starter templates to prevent flat file dumps?
+
+**Decision:** Tree structure is always sorted based on agent-optimized domain knowledge search. When a new NODE.md is proposed, the tree autonomously restructures itself for optimal agent navigation.
+
+---
+
+## Q7: TUI for init onboarding
+
+**Question:** Should there be a TUI to help teams set up?
+
+**Decision:** Accepted as a feature proposal. To be built as part of the CLI.
+
+---
+
+## Key Architectural Decision: Decision Layer vs Execution Layer
+
+The Context Tree is the **decision layer**. Codebases are the **execution layer**. They are separated.
+
+- The decision layer contains: why, what, who, when, design decisions, ownership, principles.
+- The execution layer contains: how, code, configs, implementations.
+- The tree does NOT have codebase context. It does not read code.
+- Code does NOT change the tree. Implementation does not modify decisions.
+- Agents in the execution layer must follow the tree. The tree is the source of truth.
+- If execution diverges from decision, a reviewer or maintainer agent flags it. But the tree is not auto-updated from code.
+
+This separation keeps the tree clean, stable, and authoritative. The tree is law. Code follows.
