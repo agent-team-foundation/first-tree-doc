@@ -24,8 +24,8 @@ Questions raised during doc planning. All resolved by team discussion on 2026-03
 
 **Decision:** The Context Tree is the _decision layer_. The codebase is the _execution layer_. These two layers are separated and independent.
 
-- The decision layer does not have execution layer context. The tree does not look at code.
-- The execution layer does not change the decision layer. Code does not modify the tree.
+- The execution layer does not change the decision layer. Code does not modify what the tree decided.
+- Agents enforce this: reviewer agents check PRs against the tree. If code conflicts with a decision in the tree, the PR is blocked.
 - Agents must follow NODE.md when implementing. The tree is the source of truth.
 - **Reviewer agent:** checks that PRs in the codebase have no conflict with NODE.md.
 - **Maintainer agent:** periodically checks code/doc alignment (cron job). If execution diverges from the decision, the maintainer flags it, but the tree is not auto-updated from code.
@@ -94,8 +94,8 @@ The Context Tree is the **decision layer**. Codebases are the **execution layer*
 
 - The decision layer contains: why, what, who, when, design decisions, ownership, principles.
 - The execution layer contains: how, code, configs, implementations.
-- The tree does NOT have codebase context. It does not read code.
-- Code does NOT change the tree. Implementation does not modify decisions.
+- Code does NOT change what the tree decided. Implementation does not modify decisions.
+- Agents enforce this: reviewer agents block PRs that conflict with the tree. Maintainer agents flag drift.
 - Agents in the execution layer must follow the tree. The tree is the source of truth.
 - If execution diverges from decision, a reviewer or maintainer agent flags it. But the tree is not auto-updated from code.
 
