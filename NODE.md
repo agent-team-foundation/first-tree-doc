@@ -1,6 +1,6 @@
 ---
 title: "What is Context Tree?"
-owners: [liuchao001]
+owners: ["*"]
 ---
 
 This is the index page for **Context Tree**.

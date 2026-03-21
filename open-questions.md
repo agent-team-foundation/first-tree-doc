@@ -1,6 +1,6 @@
 ---
 title: "Open Questions — Resolved"
-owners: [liuchao001]
+owners: ["*"]
 status: approved
 ---
 
