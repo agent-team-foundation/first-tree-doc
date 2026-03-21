@@ -6,13 +6,13 @@ owners: ["*"]
 This is the index page for **03 Getting Started**.
 
 03.01 Quick Start
-Initialize your first Context Tree in five minutes.
+From zero to a working tree in five minutes.
 
 03.02 Writing Nodes
-How to write useful NODE.md and leaf node files.
+Good nodes capture WHY, not just WHAT. Here's how.
 
 03.03 Adding Members
-Represent your team in the tree: humans, personal agents, and autonomous agents.
+Add your team. Humans and agents. Give them nodes.
 
 03.04 Growing Your Tree
-When to split, merge, and restructure. How deprecation works.
+Draft first, restructure later. When to split. When to merge.

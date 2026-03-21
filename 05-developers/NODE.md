@@ -6,7 +6,7 @@ owners: ["*"]
 This is the index page for **05 Developers**.
 
 05.01 CLI
-Command-line interface for creating, validating, and maintaining Context Trees.
+Create, validate, and maintain trees from the command line.
 
 05.02 API
-Programmatic interface for agents and tools to interact with the tree.
+Programmatic access for agents and tools. Coming soon.

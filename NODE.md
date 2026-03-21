@@ -9,91 +9,93 @@ This is the index page for **Context Tree**.
 
 Context Tree is an open standard for organizational memory. It defines how teams of humans and AI agents structure, own, and navigate shared knowledge.
 
+[View all docs in one page](https://github.com/agent-team-foundation/context-tree-doc)
+
 ## 01 Why It Exists
 
 01.01 The Problem
-Why teams struggle with AI agents today, and the pattern we call _context routing_.
+Your agents have amnesia. You became the context router.
 
 01.02 Agent Teams
-What an Agent Team is: humans and AI agents working together as peers.
+Humans and agents as peers. Not operators and tools.
 
 01.03 Design Principles
-Transparency, agents as first-class, tree over graph, git as foundation.
+The bets we made and why. Tree over graph. Decision over execution.
 
 ## 02 How It Works
 
 02.01 The Tree
-A Context Tree is a Git repository organized as a hierarchy of markdown files.
+Folders and markdown files in a git repo. That's it.
 
 02.02 Nodes
-NODE.md and leaf nodes: what they are and how they work.
+NODE.md is the folder's identity. Everything else is a leaf.
 
 02.03 Ownership
-The six ownership rules that govern who can change what.
+Six rules. Who can approve what. What happens when owners disagree.
 
 02.04 Members
-How humans and agents are represented in the tree.
+Humans, personal agents, autonomous agents. Same format. Same rules.
 
 02.05 Soft Links
-Cross-references between nodes without breaking the tree structure.
+Cross-references without turning the tree into a graph.
 
 02.06 Frontmatter Reference
-Every frontmatter field, formally defined.
+Every YAML field, formally defined.
 
 ## 03 Getting Started
 
 03.01 Quick Start
-Initialize your first Context Tree in five minutes.
+From zero to a working tree in five minutes.
 
 03.02 Writing Nodes
-How to write useful NODE.md and leaf node files.
+Good nodes capture WHY, not just WHAT. Here's how.
 
 03.03 Adding Members
-Represent your team in the tree.
+Add your team. Humans and agents. Give them nodes.
 
 03.04 Growing Your Tree
-When to split, merge, and restructure.
+Draft first, restructure later. When to split. When to merge.
 
 ## 04 Infrastructure
 
 04.01 Autonomous Agents
-Agents that run continuously and own domains.
+Agents that run continuously, own domains, and act on their own.
 
 04.02 Context Tree
-The tree as infrastructure, in detail.
+The organizational memory. The first pillar.
 
 04.03 Message System
-How agents and humans communicate across domains.
+How agents talk to each other and to humans.
 
 04.04 Identity
-Agent identity, permissions, and delegation.
+Three types of participants. Permissions are explicit and revocable.
 
 04.05 Database
-Structured data, data lake, and data warehouse.
+Operational data that does not belong in a markdown file.
 
 04.06 Workflow
-Deterministic automation alongside agent reasoning.
+Deterministic automation. Use agents for judgment. Use workflows for correctness.
 
 ## 05 Developers
 
 05.01 CLI
-Command-line interface reference.
+Create, validate, and maintain trees from the command line.
 
 05.02 API
-API reference.
+Programmatic access for agents and tools. Coming soon.
 
 ## 06 Examples
 
 06.01 first-tree
-The original Context Tree. Defines the standard itself.
+The tree that defines the standard. It documents itself.
 
 06.02 kael-tree
-A real product tree for a multi-repo AI agent product. Shows the standard in practice at scale.
+A real product tree for a multi-repo AI agent. The standard at scale.
 
 ## 07 Community
 
 07.01 Contributing
-How to contribute to Context Tree.
+Fix something. Add an example. Propose a pattern.
 
 07.02 Links
-Discord, Twitter, blog, GitHub.
+Discord, GitHub, blog, website.

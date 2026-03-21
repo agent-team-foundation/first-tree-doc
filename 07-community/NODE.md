@@ -6,7 +6,7 @@ owners: ["*"]
 This is the index page for **07 Community**.
 
 07.01 Contributing
-How to contribute to Context Tree.
+Fix something. Add an example. Propose a pattern.
 
 07.02 Links
-Discord, Twitter, blog, GitHub.
+Discord, GitHub, blog, website.
