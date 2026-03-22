@@ -1,13 +1,13 @@
 ---
-title: "What is Context Tree?"
+title: "What is First Tree?"
 owners: ["*"]
 ---
 
-This is the index page for **Context Tree**.
+This is the index page for **First Tree**.
 
 *Code Is Cheap. Context Is Law.*
 
-Context Tree is an open standard for organizational memory. It defines how teams of humans and AI agents structure, own, and navigate shared knowledge.
+First Tree is an open standard for organizational memory. It defines how teams of humans and AI agents structure, own, and navigate shared knowledge.
 
 [View all docs in one page](https://github.com/agent-team-foundation/context-tree-doc)
 

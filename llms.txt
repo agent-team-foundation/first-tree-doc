@@ -1,47 +1,47 @@
-# Context Tree docs
+# First Tree docs
 
 ## 1. Why It Exists
 
-- [The Problem](https://github.com/agent-team-foundation/context-tree-doc/blob/main/01-why-it-exists/01.01-the-problem.md) - Your agents have amnesia. You became the context router.
-- [Agent Teams](https://github.com/agent-team-foundation/context-tree-doc/blob/main/01-why-it-exists/01.02-agent-teams.md) - Humans and agents as peers. Not operators and tools.
-- [Design Principles](https://github.com/agent-team-foundation/context-tree-doc/blob/main/01-why-it-exists/01.03-design-principles.md) - The bets we made and why. Tree over graph. Decision over execution.
+- [The Problem](https://github.com/agent-team-foundation/first-tree-doc/blob/main/01-why-it-exists/01.01-the-problem.md) - Your agents have amnesia. You became the context router.
+- [Agent Teams](https://github.com/agent-team-foundation/first-tree-doc/blob/main/01-why-it-exists/01.02-agent-teams.md) - Humans and agents as peers. Not operators and tools.
+- [Design Principles](https://github.com/agent-team-foundation/first-tree-doc/blob/main/01-why-it-exists/01.03-design-principles.md) - The bets we made and why. Tree over graph. Decision over execution.
 
 ## 2. How It Works
 
-- [The Tree](https://github.com/agent-team-foundation/context-tree-doc/blob/main/02-how-it-works/02.01-the-tree.md) - Folders and markdown files in a git repo. That's it.
-- [Nodes](https://github.com/agent-team-foundation/context-tree-doc/blob/main/02-how-it-works/02.02-nodes.md) - NODE.md is the folder's identity. Everything else is a leaf.
-- [Ownership](https://github.com/agent-team-foundation/context-tree-doc/blob/main/02-how-it-works/02.03-ownership.md) - Six rules. Who can approve what. What happens when owners disagree.
-- [Members](https://github.com/agent-team-foundation/context-tree-doc/blob/main/02-how-it-works/02.04-members.md) - Humans, personal agents, autonomous agents. Same format. Same rules.
-- [Soft Links](https://github.com/agent-team-foundation/context-tree-doc/blob/main/02-how-it-works/02.05-soft-links.md) - Cross-references without turning the tree into a graph.
-- [Frontmatter Reference](https://github.com/agent-team-foundation/context-tree-doc/blob/main/02-how-it-works/02.06-frontmatter-reference.md) - Every YAML field, formally defined.
+- [The Tree](https://github.com/agent-team-foundation/first-tree-doc/blob/main/02-how-it-works/02.01-the-tree.md) - Folders and markdown files in a git repo. That's it.
+- [Nodes](https://github.com/agent-team-foundation/first-tree-doc/blob/main/02-how-it-works/02.02-nodes.md) - NODE.md is the folder's identity. Everything else is a leaf.
+- [Ownership](https://github.com/agent-team-foundation/first-tree-doc/blob/main/02-how-it-works/02.03-ownership.md) - Six rules. Who can approve what. What happens when owners disagree.
+- [Members](https://github.com/agent-team-foundation/first-tree-doc/blob/main/02-how-it-works/02.04-members.md) - Humans, personal agents, autonomous agents. Same format. Same rules.
+- [Soft Links](https://github.com/agent-team-foundation/first-tree-doc/blob/main/02-how-it-works/02.05-soft-links.md) - Cross-references without turning the tree into a graph.
+- [Frontmatter Reference](https://github.com/agent-team-foundation/first-tree-doc/blob/main/02-how-it-works/02.06-frontmatter-reference.md) - Every YAML field, formally defined.
 
 ## 3. Getting Started
 
-- [Quick Start](https://github.com/agent-team-foundation/context-tree-doc/blob/main/03-getting-started/03.01-quick-start.md) - From zero to a working tree in five minutes.
-- [Writing Nodes](https://github.com/agent-team-foundation/context-tree-doc/blob/main/03-getting-started/03.02-writing-nodes.md) - Good nodes capture WHY, not just WHAT. Here's how.
-- [Adding Members](https://github.com/agent-team-foundation/context-tree-doc/blob/main/03-getting-started/03.03-adding-members.md) - Add your team. Humans and agents. Give them nodes.
-- [Growing Your Tree](https://github.com/agent-team-foundation/context-tree-doc/blob/main/03-getting-started/03.04-growing-your-tree.md) - Draft first, restructure later. When to split. When to merge.
+- [Quick Start](https://github.com/agent-team-foundation/first-tree-doc/blob/main/03-getting-started/03.01-quick-start.md) - From zero to a working tree in five minutes.
+- [Writing Nodes](https://github.com/agent-team-foundation/first-tree-doc/blob/main/03-getting-started/03.02-writing-nodes.md) - Good nodes capture WHY, not just WHAT. Here's how.
+- [Adding Members](https://github.com/agent-team-foundation/first-tree-doc/blob/main/03-getting-started/03.03-adding-members.md) - Add your team. Humans and agents. Give them nodes.
+- [Growing Your Tree](https://github.com/agent-team-foundation/first-tree-doc/blob/main/03-getting-started/03.04-growing-your-tree.md) - Draft first, restructure later. When to split. When to merge.
 
 ## 4. Infrastructure
 
-- [Autonomous Agents](https://github.com/agent-team-foundation/context-tree-doc/blob/main/04-infrastructure/04.01-autonomous-agents.md) - Agents that run continuously, own domains, and act on their own.
-- [Context Tree](https://github.com/agent-team-foundation/context-tree-doc/blob/main/04-infrastructure/04.02-context-tree.md) - The organizational memory. The first pillar.
-- [Message System](https://github.com/agent-team-foundation/context-tree-doc/blob/main/04-infrastructure/04.03-message-system.md) - How agents talk to each other and to humans.
-- [Identity](https://github.com/agent-team-foundation/context-tree-doc/blob/main/04-infrastructure/04.04-identity.md) - Three types of participants. Permissions are explicit and revocable.
-- [Database](https://github.com/agent-team-foundation/context-tree-doc/blob/main/04-infrastructure/04.05-database.md) - Operational data that does not belong in a markdown file.
-- [Workflow](https://github.com/agent-team-foundation/context-tree-doc/blob/main/04-infrastructure/04.06-workflow.md) - Deterministic automation. Use agents for judgment. Use workflows for correctness.
+- [Autonomous Agents](https://github.com/agent-team-foundation/first-tree-doc/blob/main/04-infrastructure/04.01-autonomous-agents.md) - Agents that run continuously, own domains, and act on their own.
+- [Context Tree](https://github.com/agent-team-foundation/first-tree-doc/blob/main/04-infrastructure/04.02-context-tree.md) - The organizational memory. The first pillar.
+- [Message System](https://github.com/agent-team-foundation/first-tree-doc/blob/main/04-infrastructure/04.03-message-system.md) - How agents talk to each other and to humans.
+- [Identity](https://github.com/agent-team-foundation/first-tree-doc/blob/main/04-infrastructure/04.04-identity.md) - Three types of participants. Permissions are explicit and revocable.
+- [Database](https://github.com/agent-team-foundation/first-tree-doc/blob/main/04-infrastructure/04.05-database.md) - Operational data that does not belong in a markdown file.
+- [Workflow](https://github.com/agent-team-foundation/first-tree-doc/blob/main/04-infrastructure/04.06-workflow.md) - Deterministic automation. Use agents for judgment. Use workflows for correctness.
 
 ## 5. Developers
 
-- [CLI](https://github.com/agent-team-foundation/context-tree-doc/blob/main/05-developers/05.01-cli.md) - Create, validate, and maintain trees from the command line.
-- [API](https://github.com/agent-team-foundation/context-tree-doc/blob/main/05-developers/05.02-api.md) - Programmatic access for agents and tools. Coming soon.
+- [CLI](https://github.com/agent-team-foundation/first-tree-doc/blob/main/05-developers/05.01-cli.md) - Create, validate, and maintain trees from the command line.
+- [API](https://github.com/agent-team-foundation/first-tree-doc/blob/main/05-developers/05.02-api.md) - Programmatic access for agents and tools. Coming soon.
 
 ## 6. Examples
 
-- [first-tree](https://github.com/agent-team-foundation/context-tree-doc/blob/main/06-examples/06.01-first-tree.md) - The tree that defines the standard. It documents itself.
-- [kael-tree](https://github.com/agent-team-foundation/context-tree-doc/blob/main/06-examples/06.02-kael-tree.md) - A real product tree for a multi-repo AI agent. The standard at scale.
+- [first-tree](https://github.com/agent-team-foundation/first-tree-doc/blob/main/06-examples/06.01-first-tree.md) - The tree that defines the standard. It documents itself.
+- [kael-tree](https://github.com/agent-team-foundation/first-tree-doc/blob/main/06-examples/06.02-kael-tree.md) - A real product tree for a multi-repo AI agent. The standard at scale.
 
 ## 7. Community
 
-- [Contributing](https://github.com/agent-team-foundation/context-tree-doc/blob/main/07-community/07.01-contributing.md) - Fix something. Add an example. Propose a pattern.
-- [Links](https://github.com/agent-team-foundation/context-tree-doc/blob/main/07-community/07.02-links.md) - Discord, GitHub, blog, website.
+- [Contributing](https://github.com/agent-team-foundation/first-tree-doc/blob/main/07-community/07.01-contributing.md) - Fix something. Add an example. Propose a pattern.
+- [Links](https://github.com/agent-team-foundation/first-tree-doc/blob/main/07-community/07.02-links.md) - Discord, GitHub, blog, website.
